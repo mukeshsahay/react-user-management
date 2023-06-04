@@ -1,1 +1,1 @@
-export const API_SERVER = 'https://backend-api-server.vercel.app/users';
+export const API_SERVER = 'https://backend-api-server.vercel.app/users/';

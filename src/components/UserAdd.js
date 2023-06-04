@@ -1,5 +1,5 @@
 import axios from "axios";
-import API_SERVER from '../constants.js';
+import { API_SERVER } from '../constants.js';
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
