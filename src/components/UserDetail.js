@@ -16,7 +16,7 @@ function UserDetail() {
     const [currentUser, setCurrentUser] = useState(initialUserState);
 
     const getUser = () => {
-        axios.get(API_SERVER + id)
+        axios.get(API_SERVER + '/' + id)
             .then(result => {
                 setCurrentUser(result.data);
                 console.log(result);
@@ -32,7 +32,7 @@ function UserDetail() {
 
     const deleteUser = () => {
         if(window.confirm(`Do you want to delete user - ${currentUser.name}?`)) {
-            axios.delete(API_SERVER + currentUser.id)
+            axios.delete(API_SERVER + '/' + currentUser.id)
                 .then(result => {
                     console.log(result);
                     console.log('Deleted Successfully.');

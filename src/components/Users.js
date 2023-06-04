@@ -26,7 +26,7 @@ function Users() {
 
     const deleteUser = (currentUser) => {
         if(window.confirm(`Do you want to delete user - ${currentUser.name}?`)) {
-            axios.delete(API_SERVER + currentUser.id)
+            axios.delete(API_SERVER + '/' + currentUser.id)
             .then(result => { 
                 console.log(result);
                 getUsers();

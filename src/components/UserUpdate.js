@@ -13,7 +13,7 @@ function UserUpdate() {
 
     const [currentUser, setCurrentUser] = useState(initialUserState);
     const getUser = () => {
-        axios.get(API_SERVER + id)
+        axios.get(API_SERVER + '/' + id)
             .then(result => {
                 setCurrentUser(result.data);
                 console.log(result);
@@ -36,7 +36,7 @@ function UserUpdate() {
 
     const saveUser = (event) => {
         event.preventDefault();
-        axios.put(API_SERVER + id, currentUser)
+        axios.put(API_SERVER + '/' + id, currentUser)
             .then(result => {
                 console.log(result);
                 navigate("/users");
